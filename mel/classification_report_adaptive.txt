@@ -1,0 +1,27 @@
+Speech Emotion Recognition - Adaptive Learning Model
+================================================================================
+
+ARCHITECTURE:
+  • 3-Channel Input: Mel + Delta + Delta-Delta (128 × 3)
+  • Rectangular CNN Kernels: (5,3), (3,5), (3,3)
+  • Attention Mechanism: ENABLED (silence handling)
+  • Adaptive Learning: WarmUp + Cosine Decay
+  • Target LR: 0.0001
+  • Training Resumed from Epoch: 88
+================================================================================
+
+              precision    recall  f1-score   support
+
+       angry     0.8563    0.8882    0.8720       161
+   confident     0.8198    0.8812    0.8494       160
+        fear     0.7808    0.7081    0.7427       161
+       happy     0.8409    0.6894    0.7577       161
+         sad     0.7112    0.8261    0.7644       161
+
+    accuracy                         0.7985       804
+   macro avg     0.8018    0.7986    0.7972       804
+weighted avg     0.8018    0.7985    0.7971       804
+
+
+Test Accuracy: 79.85%
+Test Loss: 1.0514
